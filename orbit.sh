@@ -35,7 +35,7 @@ extract_python_exe() {
         local python_exe=${CONDA_PREFIX}/bin/python
     else
         # use python from kit
-        local python_exe=${build_path}/python.sh
+        local python_exe=${build_path}/python.bat
     fi
     # check if there is a python path available
     if [ ! -f "${python_exe}" ]; then
@@ -59,7 +59,7 @@ extract_isaacsim_exe() {
         build_path=${ORBIT_PATH}/_isaac_sim
     fi
     # python executable to use
-    local isaacsim_exe=${build_path}/isaac-sim.sh
+    local isaacsim_exe=${build_path}/isaac-sim.bat
     # check if there is a python path available
     if [ ! -f "${isaacsim_exe}" ]; then
         echo "[ERROR] No isaac-sim executable found at path: ${build_path}" >&2
